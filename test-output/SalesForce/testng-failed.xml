@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SalesForce]">
+  <parameter name="password" value="SelBootcamp$123"/>
+  <parameter name="url" value="https://login.salesforce.com"/>
+  <parameter name="username" value="matschie@testleaf.com"/>
+  <test thread-count="5" name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="com.tesng.classCreate.EditWorkType">
+        <methods>
+          <include name="close"/>
+          <include name="login"/>
+          <include name="initialize"/>
+          <include name="runEditWorkType"/>
+        </methods>
+      </class> <!-- com.tesng.classCreate.EditWorkType -->
+      <class name="com.tesng.classCreate.createAccount">
+        <methods>
+          <include name="close"/>
+          <include name="runcreateAccount"/>
+          <include name="login"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- com.tesng.classCreate.createAccount -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [SalesForce] -->
